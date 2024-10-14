@@ -4,6 +4,10 @@
 
 Official implentation of ICME 2024 paper [*HQ-Avatar: Towards High-Quality 3D Avatar Generation via Point-based Representation*](https://ieeexplore.ieee.org/document/10688199).
 
+Our new work *E3Gen: Efficient, Expressive and Editable Avatars Generation* in ACM MM 2024 is available in [*E3Gen*](https://github.com/olivia23333/E3Gen). You can also check it.
+
+This repo is still under construction and will be refined soon.(in one week)
+
 ## preprocess
 ```bash
 CUDA_VISIBLE_DEVICES=0 python preprocess.py --tot 4 --id 0
@@ -21,5 +25,3 @@ CUDA_VISIBLE_DEVICES=0 python precompute.py expname=gdna_addtex_coarse datamodul
 # train fine
 python train.py expname=gdna_addtex_fine datamodule=thuman +experiments=fine model.norm_network.multires=6 model.tex_network.multires=6 starting_path='./outputs/gdna_addtex_coarse/checkpoints/last.ckpt'
 ```
-
-This repo is still under construction and will be refined soon.(in one week)
